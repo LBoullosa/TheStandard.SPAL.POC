@@ -1,2 +1,2 @@
 # TheStandard.SPAL.POC
-Proof of concept for implement SPAL
+Proof of concept to implement SPAL concept under The Standard paradigm.
