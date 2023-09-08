@@ -9,7 +9,7 @@ namespace SPAL.Core.Extensions
 		{
 		private static TSPALBuilder AddProviderConfiguration<TSPALBuilder, TSPALClientProvider, TProviderOption>(
 				this TSPALBuilder builder,
-				string id)
+				string providerId)
 			where TSPALBuilder : ISPALBuilder
 			where TSPALClientProvider : ISPALClientProvider
 			where TProviderOption : ProviderOption, new()
@@ -29,7 +29,7 @@ namespace SPAL.Core.Extensions
 					{
 					return new TProviderOption
 						{
-						Id = id,
+						Id = providerId,
 						ProviderType = typeof(TSPALClientProvider)
 						};
 					});
@@ -52,14 +52,14 @@ namespace SPAL.Core.Extensions
 
 		public static ISPALBuilder AddClientProvider<TSPALClientProvider, TProviderOption>(
 				this ISPALBuilder builder,
-				string id)
+				string providerId)
 			where TSPALClientProvider : ISPALClientProvider
 			where TProviderOption : ProviderOption, new()
 			{
 			if (builder == null)
 				throw new ArgumentException(nameof(builder));
 
-			builder.AddProviderConfiguration<ISPALBuilder, TSPALClientProvider, TProviderOption>(id);
+			builder.AddProviderConfiguration<ISPALBuilder, TSPALClientProvider, TProviderOption>(providerId);
 
 			return builder;
 			}
