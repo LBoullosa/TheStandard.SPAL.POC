@@ -59,10 +59,10 @@ internal class Program
 	/// For example, imagine two external systems which realizes the same functionality
 	/// but are developed by different companies. Each implementation deals with its own
 	/// external models and the convert them into a local model.
-	/// From a constant, value or whatever we could invoke/use one library or another without
+	/// From a constant, value or whatever we could invoke/use one library or/and another without
 	/// too much changes.
 	/// </summary>
-	private static void DoImplementationXorY()
+	private static void DoImplementationXAndY()
 		{
 		var services = new ServiceCollection();
 
@@ -89,6 +89,6 @@ internal class Program
 		{
 		DoImplementationX();
 		DoImplementationY();
-		DoImplementationXorY();
+		DoImplementationXAndY();
 		}
 	}
