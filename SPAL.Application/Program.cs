@@ -78,10 +78,12 @@ internal class Program
 		IServiceProvider serviceProvider = services.BuildServiceProvider();
 
 		using IServiceScope scope = serviceProvider.CreateScope();
-		string value = scope.ServiceProvider.GetService<ISPALService>().GetStringWithProviderId("X");
+		ISPALService spalService = scope.ServiceProvider.GetService<ISPALService>();
+
+		string value = spalService.GetStringWithProviderId("X");
 		Console.WriteLine($"Value selected from implementation X: " + value);
 
-		value = scope.ServiceProvider.GetService<ISPALService>().GetStringWithProviderId("Y");	
+		value = spalService.GetStringWithProviderId("Y");	
 		Console.WriteLine($"Value selected from implementation Y: " + value);
 		}
 
