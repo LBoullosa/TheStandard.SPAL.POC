@@ -1,8 +1,8 @@
 # TheStandard.SPAL.POC
 Proof of concept to implement SPAL concept under The Standard paradigm.
 
-
-<p>The main idea underneath this concept is being able to have multiple implementations for the same purpose. This approach enable us to use one or another implementation at design time or even at runtime.</p>
+SPAL comes from Standard Provider Abstraction Library.
+The main idea underneath this concept is being able to have multiple implementations for the same purpose. This approach enable us to use one or another implementation at design time or even at runtime.
 
 
 <h3>Use case examples at design time</h4>
