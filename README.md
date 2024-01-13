@@ -12,7 +12,7 @@ The main idea underneath this concept is being able to have multiple implementat
 * Storage brokers. Switch between any data access layer implementation.
 * Base components for IU desing. Switch between any presentation layer implementation.
 
- 
+
 <h3>Use case examples at runtime</h4>
 
 ![Overview](SPAL.POC-External%20Systems.drawio.png)
